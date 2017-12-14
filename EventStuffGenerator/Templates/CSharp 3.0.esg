@@ -1,0 +1,39 @@
+﻿#region [EN] event things for C# 3.0
+public event EventHandler<[EN]EventArgs> [EN];
+
+protected virtual void On[EN]([EN]EventArgs e)
+{
+	if ([EN] != null)
+		[EN](this, e);
+}
+
+private [EN]EventArgs On[EN](<*[AT] [AC] :: , *>)
+{
+	[EN]EventArgs args = new [EN]EventArgs(<*[AC] :: , *>);
+    On[EN](args);
+
+    return args;
+}
+
+private [EN]EventArgs On[EN]ForOut()
+{
+	[EN]EventArgs args = new [EN]EventArgs();
+    On[EN](args);
+
+    return args;
+}
+
+public class [EN]EventArgs : EventArgs
+{
+	<*public [AT] [AP] { get; set;} :: [N]*>
+
+	public [EN]EventArgs()
+    {
+	}
+
+	public [EN]EventArgs(<*[AT] [AC] :: , *>)
+    {
+		<*[AP] = [AC]; :: [N]*>
+	}
+}
+#endregion

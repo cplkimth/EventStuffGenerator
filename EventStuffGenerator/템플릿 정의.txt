@@ -1,0 +1,15 @@
+﻿template = {event name | class name | argument loop | character} ;
+
+event name = "[EN]";
+
+class name = "[CN]";
+
+argument loop = "<*" , {argument type | argument pacsal name | argument camel name | character}, "::", {loop seperator} , "*>" ;
+
+loop seperator = "[N]" | "[T]" | character ;
+
+argument type = "[AT]"
+argument pacsal name = "[AP]"
+argument camel name = "[AC]"
+
+character = [a-z] | [A-Z] | [0-9] | white space ;

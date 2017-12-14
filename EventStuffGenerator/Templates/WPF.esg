@@ -1,0 +1,30 @@
+﻿#region [EN] event
+
+public static readonly RoutedEvent [EN]Event = EventManager.RegisterRoutedEvent("[EN]", RoutingStrategy.Bubble, typeof(EventHandler<[EN]Args>), typeof(ContainerType));
+
+public event EventHandler<[EN]Args> [EN]
+{
+    add { AddHandler([EN]Event, value); }
+    remove { RemoveHandler([EN]Event, value); }
+}
+
+protected virtual [EN]Args On[EN](<*[AT] [AC] :: , *>)
+{
+    var args = new [EN]Args([EN]Event);
+	<*args.[AP] = [AC]; :: [N]*>
+
+    RaiseEvent(args);
+
+    return args;
+}
+
+public class [EN]Args : RoutedEventArgs
+{
+    public [EN]Args(RoutedEvent routedEvent): base(routedEvent)
+    {
+    }
+
+    <*public [AT] [AP] { get; set;} :: [N]*>
+}
+
+#endregion
