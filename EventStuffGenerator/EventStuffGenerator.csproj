@@ -58,7 +58,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>0BD563BC7B777769E1A01FA2C9B12CB8B95D25AE</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>30F8F9EA2A0B6B13A0D047C915F14C8AB96930BB</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>EventStuffGenerator_TemporaryKey.pfx</ManifestKeyFile>
