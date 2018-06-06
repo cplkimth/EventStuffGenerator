@@ -11,89 +11,89 @@ namespace EventStuffGenerator.TestConsole
 
         }
 
-        #region AgeC event things for C# 3.0
-        public event EventHandler<AgeCEventArgs> AgeC;
+        #region Aaa event things for C# 3.0
+        public event EventHandler<AaaEventArgs> Aaa;
 
-        protected virtual void OnAgeC(AgeCEventArgs e)
+        protected virtual void OnAaa(AaaEventArgs e)
         {
-            if (AgeC != null)
-                AgeC(this, e);
+            if (Aaa != null)
+                Aaa(this, e);
         }
 
-        private AgeCEventArgs OnAgeC(int age  , int age2 )
+        private AaaEventArgs OnAaa(int an  , int v )
         {
-            AgeCEventArgs args = new AgeCEventArgs(age  , age2 );
-            OnAgeC(args);
+            AaaEventArgs args = new AaaEventArgs(an  , v );
+            OnAaa(args);
 
             return args;
         }
 
 
-        private AgeCEventArgs OnAgeCForOut()
+        private AaaEventArgs OnAaaForOut()
         {
-            AgeCEventArgs args = new AgeCEventArgs();
-            OnAgeC(args);
+            AaaEventArgs args = new AaaEventArgs();
+            OnAaa(args);
 
             return args;
         }
 
 
-        public class AgeCEventArgs : EventArgs
+        public class AaaEventArgs : EventArgs
         {
-            public int Age { get; set;}  
-            public int Age2 { get; set;} 
+            public int An { get; set;}  
+            public int V { get; set;} 
 
 	
-            public AgeCEventArgs()
+            public AaaEventArgs()
             {
             }
 	
-            public AgeCEventArgs(int age  , int age2 )
+            public AaaEventArgs(int an  , int v )
             {
-                Age = age;  
-                Age2 = age2; 
+                An = an;  
+                V = v; 
             }
 	
         }
         #endregion
 
-        #region AgeCC event things for C# 3.0
-        public event EventHandler<AgeCCEventArgs> AgeCC;
+        #region Baa event things for C# 3.0
+        public event EventHandler<BaaEventArgs> Baa;
 
-        protected virtual void OnAgeCC(AgeCCEventArgs e)
+        protected virtual void OnBaa(BaaEventArgs e)
         {
-            if (AgeCC != null)
-                AgeCC(this, e);
+            if (Baa != null)
+                Baa(this, e);
         }
 
-        private AgeCCEventArgs OnAgeCC()
+        private BaaEventArgs OnBaa()
         {
-            AgeCCEventArgs args = new AgeCCEventArgs();
-            OnAgeCC(args);
+            BaaEventArgs args = new BaaEventArgs();
+            OnBaa(args);
 
             return args;
         }
 
 /*
-private AgeCCEventArgs OnAgeCCForOut()
+private BaaEventArgs OnBaaForOut()
 {
-	AgeCCEventArgs args = new AgeCCEventArgs();
-    OnAgeCC(args);
+	BaaEventArgs args = new BaaEventArgs();
+    OnBaa(args);
 
     return args;
 }
 */
 
-        public class AgeCCEventArgs : EventArgs
+        public class BaaEventArgs : EventArgs
         {
 	
 
             /*
-            public AgeCCEventArgs()
+            public BaaEventArgs()
             {
             }
             
-            public AgeCCEventArgs()
+            public BaaEventArgs()
             {
                 
             }
