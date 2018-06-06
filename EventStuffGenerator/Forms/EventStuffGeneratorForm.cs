@@ -29,6 +29,8 @@ namespace EventStuffGenerator.Forms
 
             Icon = Resources.Icon_EventStuffGenerator;
 
+            Text += " - " + Application.ProductVersion;
+
             uscInput.Initiate();
         }
 

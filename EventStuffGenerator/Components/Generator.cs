@@ -11,7 +11,7 @@ namespace EventStuffGenerator.Components
         public static string Generate(string templateText, string eventName, List<Argument> arguments, string className)
         {
             templateText = templateText.Replace("[EN]", eventName);
-            
+
             templateText = templateText.Replace("[CN]", className);
 
             string[] splitedTexts = Regex.Split(templateText, @"<\*(.*?)\*>", RegexOptions.Singleline);
@@ -28,12 +28,15 @@ namespace EventStuffGenerator.Components
             builder.Replace("[N]", Environment.NewLine);
             builder.Replace("[T]", "\t");
 
+            builder.Replace("[BeginCommentOnNoArg]", arguments.Count == 0 ? "/*" : string.Empty);
+            builder.Replace("[EndCommentOnNoArg]", arguments.Count == 0 ? "*/" : string.Empty);
+
             return builder.ToString();
         }
 
         private static string ReplaceArguments(string line, List<Argument> arguments)
         {
-            var tokens = line.Split(new []{"::"}, StringSplitOptions.None);
+            var tokens = line.Split(new[] { "::" }, StringSplitOptions.None);
 
             if (tokens.Length != 2)
                 throw new Exception();
