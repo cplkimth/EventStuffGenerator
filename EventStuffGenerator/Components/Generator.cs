@@ -28,8 +28,8 @@ namespace EventStuffGenerator.Components
             builder.Replace("[N]", Environment.NewLine);
             builder.Replace("[T]", "\t");
 
-            builder.Replace("[BeginCommentOnNoArg]", arguments.Count == 0 ? "/*" : string.Empty);
-            builder.Replace("[EndCommentOnNoArg]", arguments.Count == 0 ? "*/" : string.Empty);
+            builder.Replace("[BC]", arguments.Count == 0 ? "/*" : string.Empty);
+            builder.Replace("[EC]", arguments.Count == 0 ? "*/" : string.Empty);
 
             return builder.ToString();
         }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System;
+using EventStuffGenerator.Exceptions;
 
 namespace EventStuffGenerator.Components
 {
@@ -16,18 +17,20 @@ namespace EventStuffGenerator.Components
 
         public string CamelName
         {
-            get { return char.ToLower(_name[0]) + _name.Substring(1); }    
+            get { return char.ToLower(_name[0]) + _name.Substring(1); }
         }
 
         public string PascalName
         {
-            get { return char.ToUpper(_name[0]) + _name.Substring(1); }    
+            get { return char.ToUpper(_name[0]) + _name.Substring(1); }
         }
 
         public string FieldName
         {
-            get { return "_" + CamelName; }    
+            get { return "_" + CamelName; }
         }
+
+        public string[] IdentifierNames => new[] { PascalName, CamelName };
 
         public Argument(string type, string name)
         {
@@ -43,7 +46,17 @@ namespace EventStuffGenerator.Components
             for (int i = 0; i < tokens.Length; i = i + 2)
             {
                 Argument pair = new Argument(tokens[i], tokens[i + 1]);
-                arguments.Add(pair);                
+                arguments.Add(pair);
+
+                foreach (var identifierName in pair.IdentifierNames)
+                {
+                    if (identifierName.IsValidIdentifier() == false)
+                        throw new InvalidIdentifierException(identifierName);
+
+                    if (identifierName.IsCSharpKeyword())
+                        throw new InvalidIdentifierException(identifierName);
+                    
+                }
             }
 
             return arguments;

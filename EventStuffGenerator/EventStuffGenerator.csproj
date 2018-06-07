@@ -89,6 +89,7 @@
     <Compile Include="Components\HistoryItem.cs" />
     <Compile Include="Components\HistoryManager.cs" />
     <Compile Include="Components\Template.cs" />
+    <Compile Include="Components\Utilitiy.cs" />
     <Compile Include="Controls\InputControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -101,6 +102,8 @@
     <Compile Include="Controls\SnippetViewer.Designer.cs">
       <DependentUpon>SnippetViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Exceptions\InvalidIdentifierException.cs" />
+    <Compile Include="Exceptions\KeywordException.cs" />
     <Compile Include="Forms\EbnfForm.cs">
       <SubType>Form</SubType>
     </Compile>
