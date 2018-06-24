@@ -1,8 +1,12 @@
-﻿template = {event name | class name | argument loop | character} ;
+﻿template = {event name | class name | argument loop | character | begin comment | end comment} ;
 
 event name = "[EN]";
 
 class name = "[CN]";
+
+begin comment = "[BC]",
+
+end comment = "[EC]",
 
 argument loop = "<*" , {argument type | argument pacsal name | argument camel name | character}, "::", {loop seperator} , "*>" ;
 

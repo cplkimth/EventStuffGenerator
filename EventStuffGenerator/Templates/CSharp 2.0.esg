@@ -7,15 +7,13 @@ protected virtual void On[EN]([EN]EventArgs e)
 		[EN](this, e);
 }
 
-[BeginCommentOnNoArg]
-private [EN]EventArgs On[EN](<*[AT] [AC] :: , *>)
+[BC]private [EN]EventArgs On[EN](<*[AT] [AC] :: , *>)
 {
 	[EN]EventArgs args = new [EN]EventArgs(<*[AC] :: , *>);
     On[EN](args);
 
     return args;
-}
-[EndCommentOnNoArg]
+}[EC]
 
 private [EN]EventArgs On[EN]()
 {
@@ -31,15 +29,13 @@ public class [EN]EventArgs : EventArgs
 	
 	<*public [AT] [AP] { get { return _[AC]; } set { _[AC] = value; } } :: [N]*>
 
-    [BeginCommentOnNoArg]
-	public [EN]EventArgs()
+    [BC]public [EN]EventArgs()
     {
     }
                 
 	public [EN]EventArgs(<*[AT] [AC]:: , *>)
     {
 		<*[AP] = [AC]; :: [N]*>
-	}
-	[EndCommentOnNoArg]
+	}[EC]
 }
 #endregion

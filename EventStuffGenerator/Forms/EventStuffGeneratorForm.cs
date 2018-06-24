@@ -7,6 +7,7 @@ using System.IO;
 using System.Windows.Forms;
 using EventStuffGenerator.Components;
 using EventStuffGenerator.Controls;
+using EventStuffGenerator.Exceptions;
 using EventStuffGenerator.Properties;
 
 #endregion
@@ -124,6 +125,14 @@ namespace EventStuffGenerator.Forms
             try
             {
                 arguments = Argument.ParseAsList(uscInput.Argument);
+            }
+            catch (InvalidIdentifierException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (KeywordException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             catch
             {

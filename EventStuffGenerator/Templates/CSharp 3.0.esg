@@ -15,29 +15,25 @@ private [EN]EventArgs On[EN](<*[AT] [AC] :: , *>)
     return args;
 }
 
-[BeginCommentOnNoArg]
-private [EN]EventArgs On[EN]ForOut()
+[BC]private [EN]EventArgs On[EN]ForOut()
 {
 	[EN]EventArgs args = new [EN]EventArgs();
     On[EN](args);
 
     return args;
-}
-[EndCommentOnNoArg]
+}[EC]
 
 public class [EN]EventArgs : EventArgs
 {
 	<*public [AT] [AP] { get; set;} :: [N]*>
 
-	[BeginCommentOnNoArg]
-	public [EN]EventArgs()
+	[BC]public [EN]EventArgs()
     {
 	}
 	
 	public [EN]EventArgs(<*[AT] [AC] :: , *>)
     {
 		<*[AP] = [AC]; :: [N]*>
-	}
-	[EndCommentOnNoArg]
+	}[EC]
 }
 #endregion

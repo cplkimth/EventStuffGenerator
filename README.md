@@ -1,2 +1,3 @@
-# UnityDemo
-로직과 UI가 분리된 유니티 프로젝트 샘플
+# C# 이벤트 코드 생성기
+
+http://kimgwajang.tistory.com/category/Dev%20Tools/이벤트%20코드%20생성기
