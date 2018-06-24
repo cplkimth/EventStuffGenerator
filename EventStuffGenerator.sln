@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{DD100714
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventStuffGenerator.TestConsole", "EventStuffGenerator.TestConsole\EventStuffGenerator.TestConsole.csproj", "{3D52D11E-2F1E-4CBF-B194-E8D6A7531E16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventStuffGenerator.AsExternalTool", "EventStuffGenerator.AsExternalTool\EventStuffGenerator.AsExternalTool.csproj", "{B3C391FB-2587-4A41-8BBC-3C7F458771E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{3D52D11E-2F1E-4CBF-B194-E8D6A7531E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D52D11E-2F1E-4CBF-B194-E8D6A7531E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D52D11E-2F1E-4CBF-B194-E8D6A7531E16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3C391FB-2587-4A41-8BBC-3C7F458771E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3C391FB-2587-4A41-8BBC-3C7F458771E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3C391FB-2587-4A41-8BBC-3C7F458771E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3C391FB-2587-4A41-8BBC-3C7F458771E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
