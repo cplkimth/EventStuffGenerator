@@ -8,7 +8,7 @@ using System.Linq;
 /// <summary>
 ///     Defines a set of helper methods to classify Unicode characters.
 /// </summary>
-internal static partial class Utility
+public static partial class Utility
 {
     private static bool IsIdentifierStartCharacter(char ch)
     {
