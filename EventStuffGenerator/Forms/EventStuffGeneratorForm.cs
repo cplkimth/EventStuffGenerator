@@ -141,7 +141,7 @@ namespace EventStuffGenerator.Forms
 
             try
             {
-                e.GeneratedCode = Generator.Generate(e.Template.Text, uscInput.EventName, arguments, string.Empty);
+                e.GeneratedCode = Generator.Generate(e.Template.Text, uscInput.EventName, arguments);
                 e.Successed = true;
                 e.EventName = uscInput.EventName;
                 e.Argument = uscInput.Argument;

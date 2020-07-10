@@ -8,11 +8,10 @@ namespace EventStuffGenerator.Components
 {
     public class Generator
     {
-        public static string Generate(string templateText, string eventName, List<Argument> arguments, string className)
+        public static string Generate(string templateText, string eventName, List<Argument> arguments)
         {
             templateText = templateText.Replace("[EN]", eventName);
-
-            templateText = templateText.Replace("[CN]", className);
+            templateText = templateText.Replace("[CN]", eventName);
 
             string[] splitedTexts = Regex.Split(templateText, @"<\*(.*?)\*>", RegexOptions.Singleline);
 

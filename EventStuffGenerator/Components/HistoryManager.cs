@@ -27,8 +27,8 @@ namespace EventStuffGenerator.Components
         {
             try
             {
-                _list = new List<HistoryItem>(MaxHistoryItems);
-//                _list = IsolatedStorageHelper.Instance.LoadObject<List<HistoryItem>>(FileName);
+                // _list = new List<HistoryItem>(MaxHistoryItems);
+                _list = IsolatedStorageHelper.Instance.LoadObject<List<HistoryItem>>(FileName);
             }
             catch
             {
@@ -55,7 +55,7 @@ namespace EventStuffGenerator.Components
 
         public void Save()
         {
-//            IsolatedStorageHelper.Instance.SaveObject(_list, FileName);
+            IsolatedStorageHelper.Instance.SaveObject(_list, FileName);
 
             OnSaved(FileName, _list.Count);
         }

@@ -34,17 +34,28 @@ namespace EventStuffGenerator.Controls
             this.cheAutoCopy = new System.Windows.Forms.CheckBox();
             this.txtTemplate = new System.Windows.Forms.TextBox();
             this.txtCode = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(3, 3);
+            this.btnGenerate.Location = new System.Drawing.Point(3, 4);
+            this.btnGenerate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerate.Size = new System.Drawing.Size(86, 29);
             this.btnGenerate.TabIndex = 4;
             this.btnGenerate.Text = "생성(&G)";
             this.btnGenerate.UseVisualStyleBackColor = true;
@@ -53,9 +64,10 @@ namespace EventStuffGenerator.Controls
             // btnTemplateSave
             // 
             this.btnTemplateSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTemplateSave.Location = new System.Drawing.Point(499, 3);
+            this.btnTemplateSave.Location = new System.Drawing.Point(804, 4);
+            this.btnTemplateSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTemplateSave.Name = "btnTemplateSave";
-            this.btnTemplateSave.Size = new System.Drawing.Size(103, 23);
+            this.btnTemplateSave.Size = new System.Drawing.Size(118, 29);
             this.btnTemplateSave.TabIndex = 5;
             this.btnTemplateSave.Text = "템플릿 저장(&S)";
             this.btnTemplateSave.UseVisualStyleBackColor = true;
@@ -64,9 +76,10 @@ namespace EventStuffGenerator.Controls
             // btnCopy
             // 
             this.btnCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCopy.Location = new System.Drawing.Point(404, 3);
+            this.btnCopy.Location = new System.Drawing.Point(696, 4);
+            this.btnCopy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCopy.Name = "btnCopy";
-            this.btnCopy.Size = new System.Drawing.Size(89, 23);
+            this.btnCopy.Size = new System.Drawing.Size(102, 29);
             this.btnCopy.TabIndex = 6;
             this.btnCopy.Text = "코드 복사(&C)";
             this.btnCopy.UseVisualStyleBackColor = true;
@@ -77,9 +90,10 @@ namespace EventStuffGenerator.Controls
             this.cheAutoCopy.AutoSize = true;
             this.cheAutoCopy.Checked = true;
             this.cheAutoCopy.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cheAutoCopy.Location = new System.Drawing.Point(84, 7);
+            this.cheAutoCopy.Location = new System.Drawing.Point(96, 9);
+            this.cheAutoCopy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cheAutoCopy.Name = "cheAutoCopy";
-            this.cheAutoCopy.Size = new System.Drawing.Size(92, 16);
+            this.cheAutoCopy.Size = new System.Drawing.Size(114, 19);
             this.cheAutoCopy.TabIndex = 7;
             this.cheAutoCopy.Text = "생성 후 복사";
             this.cheAutoCopy.UseVisualStyleBackColor = true;
@@ -87,76 +101,108 @@ namespace EventStuffGenerator.Controls
             // txtTemplate
             // 
             this.txtTemplate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTemplate.Location = new System.Drawing.Point(3, 23);
+            this.txtTemplate.Location = new System.Drawing.Point(3, 21);
+            this.txtTemplate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTemplate.Multiline = true;
             this.txtTemplate.Name = "txtTemplate";
-            this.txtTemplate.Size = new System.Drawing.Size(593, 226);
+            this.txtTemplate.Size = new System.Drawing.Size(919, 273);
             this.txtTemplate.TabIndex = 8;
             // 
             // txtCode
             // 
             this.txtCode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCode.Location = new System.Drawing.Point(3, 275);
+            this.txtCode.Location = new System.Drawing.Point(3, 21);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCode.Multiline = true;
             this.txtCode.Name = "txtCode";
             this.txtCode.ReadOnly = true;
-            this.txtCode.Size = new System.Drawing.Size(593, 227);
+            this.txtCode.Size = new System.Drawing.Size(919, 269);
             this.txtCode.TabIndex = 9;
             // 
-            // label1
+            // splitContainer1
             // 
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "템플릿";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // label2
+            // splitContainer1.Panel1
             // 
-            this.label2.Location = new System.Drawing.Point(3, 252);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 12);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "코드";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.splitContainer1.Panel1.Controls.Add(this.btnTemplateSave);
+            this.splitContainer1.Panel1.Controls.Add(this.btnGenerate);
+            this.splitContainer1.Panel1.Controls.Add(this.cheAutoCopy);
+            this.splitContainer1.Panel1.Controls.Add(this.btnCopy);
             // 
-            // tableLayoutPanel1
+            // splitContainer1.Panel2
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtCode, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txtTemplate, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 32);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(599, 505);
-            this.tableLayoutPanel1.TabIndex = 12;
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Size = new System.Drawing.Size(925, 641);
+            this.splitContainer1.SplitterDistance = 43;
+            this.splitContainer1.TabIndex = 13;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.groupBox1);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer2.Size = new System.Drawing.Size(925, 594);
+            this.splitContainer2.SplitterDistance = 297;
+            this.splitContainer2.TabIndex = 14;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtTemplate);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(925, 297);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "템플릿";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtCode);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(925, 293);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "코드";
             // 
             // SnippetViewer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.btnGenerate);
-            this.Controls.Add(this.btnTemplateSave);
-            this.Controls.Add(this.btnCopy);
-            this.Controls.Add(this.cheAutoCopy);
+            this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SnippetViewer";
-            this.Size = new System.Drawing.Size(605, 540);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.Size = new System.Drawing.Size(925, 641);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -168,8 +214,9 @@ namespace EventStuffGenerator.Controls
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.TextBox txtTemplate;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

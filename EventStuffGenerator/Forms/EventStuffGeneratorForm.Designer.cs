@@ -32,8 +32,8 @@ namespace EventStuffGenerator.Forms
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.uscInput = new EventStuffGenerator.Controls.InputControl();
             this.tbcTab = new System.Windows.Forms.TabControl();
+            this.uscInput = new EventStuffGenerator.Controls.InputControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -45,6 +45,7 @@ namespace EventStuffGenerator.Forms
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -54,34 +55,38 @@ namespace EventStuffGenerator.Forms
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tbcTab);
-            this.splitContainer1.Size = new System.Drawing.Size(864, 687);
+            this.splitContainer1.Size = new System.Drawing.Size(987, 711);
             this.splitContainer1.SplitterDistance = 200;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 1;
-            // 
-            // uscInput
-            // 
-            this.uscInput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscInput.Location = new System.Drawing.Point(0, 0);
-            this.uscInput.Name = "uscInput";
-            this.uscInput.Padding = new System.Windows.Forms.Padding(5);
-            this.uscInput.Size = new System.Drawing.Size(200, 687);
-            this.uscInput.TabIndex = 0;
             // 
             // tbcTab
             // 
             this.tbcTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbcTab.Location = new System.Drawing.Point(0, 0);
+            this.tbcTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbcTab.Name = "tbcTab";
             this.tbcTab.SelectedIndex = 0;
-            this.tbcTab.Size = new System.Drawing.Size(660, 687);
+            this.tbcTab.Size = new System.Drawing.Size(782, 711);
             this.tbcTab.TabIndex = 0;
+            // 
+            // uscInput
+            // 
+            this.uscInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscInput.Location = new System.Drawing.Point(0, 0);
+            this.uscInput.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.uscInput.Name = "uscInput";
+            this.uscInput.Padding = new System.Windows.Forms.Padding(6);
+            this.uscInput.Size = new System.Drawing.Size(200, 711);
+            this.uscInput.TabIndex = 0;
             // 
             // EventStuffGeneratorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 687);
+            this.ClientSize = new System.Drawing.Size(987, 711);
             this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "EventStuffGeneratorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "이벤트 코드 생성기";

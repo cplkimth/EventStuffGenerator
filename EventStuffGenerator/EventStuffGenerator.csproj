@@ -91,6 +91,9 @@
     <Compile Include="Components\Generator.cs" />
     <Compile Include="Components\HistoryItem.cs" />
     <Compile Include="Components\HistoryManager.cs" />
+    <Compile Include="Components\IsolatedStorageHelper.cs" />
+    <Compile Include="Components\ObjectRepository.cs" />
+    <Compile Include="Components\StorageHelper.cs" />
     <Compile Include="Components\Template.cs" />
     <Compile Include="Components\Utilitiy.cs" />
     <Compile Include="Controls\InputControl.cs">

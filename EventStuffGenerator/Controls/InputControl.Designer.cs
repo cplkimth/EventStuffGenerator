@@ -48,9 +48,11 @@ namespace EventStuffGenerator.Controls
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.cmbHistory);
-            this.groupBox1.Location = new System.Drawing.Point(8, 7);
+            this.groupBox1.Location = new System.Drawing.Point(9, 9);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(199, 48);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(227, 60);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "히스토리";
@@ -61,9 +63,10 @@ namespace EventStuffGenerator.Controls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbHistory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHistory.FormattingEnabled = true;
-            this.cmbHistory.Location = new System.Drawing.Point(6, 20);
+            this.cmbHistory.Location = new System.Drawing.Point(7, 25);
+            this.cmbHistory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbHistory.Name = "cmbHistory";
-            this.cmbHistory.Size = new System.Drawing.Size(187, 20);
+            this.cmbHistory.Size = new System.Drawing.Size(213, 23);
             this.cmbHistory.TabIndex = 12;
             this.cmbHistory.SelectedIndexChanged += new System.EventHandler(this.cmbHistory_SelectedIndexChanged);
             // 
@@ -76,9 +79,11 @@ namespace EventStuffGenerator.Controls
             this.groupBox2.Controls.Add(this.txtEventName);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(8, 61);
+            this.groupBox2.Location = new System.Drawing.Point(9, 76);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(199, 430);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(227, 538);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "새로 입력";
@@ -88,35 +93,39 @@ namespace EventStuffGenerator.Controls
             this.txtArgument.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtArgument.Location = new System.Drawing.Point(6, 97);
+            this.txtArgument.Font = new System.Drawing.Font("Gulim", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtArgument.Location = new System.Drawing.Point(7, 121);
+            this.txtArgument.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtArgument.Multiline = true;
             this.txtArgument.Name = "txtArgument";
-            this.txtArgument.Size = new System.Drawing.Size(187, 327);
+            this.txtArgument.Size = new System.Drawing.Size(213, 408);
             this.txtArgument.TabIndex = 14;
             // 
             // txtEventName
             // 
             this.txtEventName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEventName.Location = new System.Drawing.Point(6, 40);
+            this.txtEventName.Font = new System.Drawing.Font("Gulim", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtEventName.Location = new System.Drawing.Point(7, 50);
+            this.txtEventName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEventName.Name = "txtEventName";
-            this.txtEventName.Size = new System.Drawing.Size(187, 21);
+            this.txtEventName.Size = new System.Drawing.Size(213, 29);
             this.txtEventName.TabIndex = 13;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(6, 17);
+            this.label3.Location = new System.Drawing.Point(7, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 20);
+            this.label3.Size = new System.Drawing.Size(114, 25);
             this.label3.TabIndex = 12;
             this.label3.Text = "이벤트 이름";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(6, 74);
+            this.label2.Location = new System.Drawing.Point(7, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 20);
+            this.label2.Size = new System.Drawing.Size(114, 25);
             this.label2.TabIndex = 11;
             this.label2.Text = "이벤트 매개변수";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -127,18 +136,21 @@ namespace EventStuffGenerator.Controls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.btnHelp);
             this.groupBox3.Controls.Add(this.btnEbnf);
-            this.groupBox3.Location = new System.Drawing.Point(8, 497);
+            this.groupBox3.Location = new System.Drawing.Point(9, 621);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(199, 53);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Size = new System.Drawing.Size(227, 66);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "도움말";
             // 
             // btnHelp
             // 
-            this.btnHelp.Location = new System.Drawing.Point(89, 20);
+            this.btnHelp.Location = new System.Drawing.Point(102, 25);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(75, 23);
+            this.btnHelp.Size = new System.Drawing.Size(86, 29);
             this.btnHelp.TabIndex = 1;
             this.btnHelp.Text = "도움말";
             this.btnHelp.UseVisualStyleBackColor = true;
@@ -146,9 +158,10 @@ namespace EventStuffGenerator.Controls
             // 
             // btnEbnf
             // 
-            this.btnEbnf.Location = new System.Drawing.Point(8, 20);
+            this.btnEbnf.Location = new System.Drawing.Point(9, 25);
+            this.btnEbnf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEbnf.Name = "btnEbnf";
-            this.btnEbnf.Size = new System.Drawing.Size(75, 23);
+            this.btnEbnf.Size = new System.Drawing.Size(86, 29);
             this.btnEbnf.TabIndex = 0;
             this.btnEbnf.Text = "EBNF";
             this.btnEbnf.UseVisualStyleBackColor = true;
@@ -156,14 +169,15 @@ namespace EventStuffGenerator.Controls
             // 
             // InputControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "InputControl";
-            this.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Size = new System.Drawing.Size(213, 557);
+            this.Padding = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Size = new System.Drawing.Size(243, 696);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
