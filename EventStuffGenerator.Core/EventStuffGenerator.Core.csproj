@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Components\IsolatedStorageHelper.cs" />
+    <Compile Remove="Components\ObjectRepository.cs" />
+    <Compile Remove="Components\StorageHelper.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Templates\default.esg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\WPF.esg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
