@@ -12,7 +12,7 @@ C#에서 ~~이벤트 핸들러를 작성하는 것 말고~~ 이벤트를 생성�
 ### Searched 이벤트 코드 생성
 * `Searched` 검색 버튼이 클릭되면 발생하는  이벤트. 이벤트 매개변수로 firstName과 lastName이 있음
 
-1. [다운로드](/releases/download/v1.0/EventStuffGenerator.Win.zip) 후 EventStuffGenerator.Win.exe 실행
+1. [다운로드](https://github.com/cplkimth/EventStuffGenerator/releases/download/v1.0/EventStuffGenerator.Win.zip) 후 EventStuffGenerator.Win.exe 실행
 
 2. 이벤트 이름과 매개변수 입력 후 코드 생성
 
