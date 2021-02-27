@@ -1,5 +1,48 @@
 # C# 이벤트 코드 생성기
-C# 이벤트 생성할 필요한 일체의 코드를 생성합니다.
+아래와 같은 C# 이벤트 생성에 필요한 각종 코드를 생성합니다.
+
+### 이벤트 선언
+```csharp
+public event EventHandler<SearchedEventArgs> Searched;
+```
+### 이벤트를 발생시키는 메서드
+```csharp
+protected virtual void OnSearched(SearchedEventArgs e)
+{
+    if (Searched != null)
+        Searched(this, e);
+}
+```
+  * 파생 클래스에서 이 메서드를 오버라이드하면 굳이 이벤트 핸들러를 등록할 필요 없음
+### 위 메서드의 오버로드
+```csharp
+private SearchedEventArgs OnSearched(string firstName  , string lastName )
+{
+    SearchedEventArgs args = new SearchedEventArgs(firstName  , lastName );
+    OnSearched(args);
+
+    return args;
+}
+```
+  * 편의 메서드임
+### 이벤트 매개변수를 래퍼한 EventArgs 클래스
+```csharp
+public class SearchedEventArgs : EventArgs
+{
+    public string FirstName { get; set;}  
+    public string LastName { get; set;} 
+
+    public SearchedEventArgs()
+    {
+    }
+	
+    public SearchedEventArgs(string firstName  , string lastName )
+    {
+        FirstName = firstName;  
+        LastName = lastName; 
+    }
+}
+```
 
 -----------------------------------
 
