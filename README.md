@@ -133,12 +133,12 @@ private void uscSearch_Searched(object sender, Controls.SearchControl.SearchedEv
 ### Searching 이벤트 코드 생성
   * `Searching` 검색 하기 전 발생하는 이벤트. 특정 조건 시 이벤트 발생을 취소할 수 있음.
 
-2. 이벤트 이름과 매개변수 입력 후 코드 생성
+1. 이벤트 이름과 매개변수 입력 후 코드 생성
   * `bool cancel` 매개변수가 추가됨
 
 ![](./documents/images/05.png)
 
-3. UserControl에 위에서 생성된 코드 붙여넣기
+2. UserControl에 위에서 생성된 코드 붙여넣기
 ```csharp
 #region Searching event things for C# 3.0
 public event EventHandler<SearchingEventArgs> Searching;
@@ -184,7 +184,7 @@ public class SearchingEventArgs : EventArgs
 }
 #endregion
 ```
-4. Search 버튼의 클릭 이벤트 핸들러에 위에서 만든 이벤트 생성하는 코드 추가
+3. Search 버튼의 클릭 이벤트 핸들러에 위에서 만든 이벤트 생성하는 코드 추가
 ```csharp
 private void btnSearch_Click(object sender, EventArgs e)
 {
@@ -196,7 +196,7 @@ private void btnSearch_Click(object sender, EventArgs e)
 }
 ```
   * `args.Cancel`에 `true` 값이 들어오면 `OnSearched` 메서드가 실행되지 않음
-5. UserControl.Searching 이벤트 핸들러 작성
+4. UserControl.Searching 이벤트 핸들러 작성
 ```csharp
 private void uscSearch_Searching(object sender, Controls.SearchControl.SearchingEventArgs e)
 {
