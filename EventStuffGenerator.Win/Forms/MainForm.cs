@@ -1,8 +1,9 @@
-﻿using System;
-using System.Diagnostics;
+﻿#region
+using System;
 using System.Windows.Forms;
 using EventStuffGenerator.Core.Components;
 using EventStuffGenerator.Win.Properties;
+#endregion
 
 namespace EventStuffGenerator.Win.Forms
 {
@@ -22,38 +23,31 @@ namespace EventStuffGenerator.Win.Forms
 
             Icon = Resources.Icon_EventStuffGenerator;
 
-            Text += " - " + Application.ProductVersion;
+#if DEBUG
+            txbEventName.Text = "Searched";
+            txbArgumentText.Text = "string firstName\r\nstring lastName";
+#endif
 
-            #if DEBUG
-            txbEventName.Text = "AgeChanged";
-            txbArgumentText.Text = "int oldAge\r\nint newAge";
-            #endif
+            txbEventName.Focus();
         }
 
-        private void tsbHelp_Click(object sender, EventArgs e)
-        {
-            Process.Start(@"https://github.com/cplkimth/EventStuffGenerator");
-        }
-
-        private void tsbEbnf_Click(object sender, EventArgs e)
+        private void btnEbnf_Click(object sender, EventArgs e)
         {
             var form = new EbnfForm();
             form.Show();
         }
 
-        private void tsbGenerate_Click(object sender, EventArgs e)
+        private void btnGenerate_Click(object sender, EventArgs e)
         {
             var templatePath = $"{Template.RootPath}/{uscTemplateSelection.SelectedTemplate}{Template.FileExtension}";
 
             var code = Generator.Generate(templatePath, txbEventName.Text.Trim(), txbArgumentText.Text.Trim());
 
-            CodeViewerForm form = new CodeViewerForm(code);
-            form.ShowDialog();
-        }
+            txbGenerated.Text = code;
+            tbcContainer.SelectedTab = tbpCode;
 
-        private void btnGenerate_Click(object sender, EventArgs e)
-        {
-            tsbGenerate.PerformClick();
+            if (chbCopyToClipboard.Checked)
+                Clipboard.SetText(code);
         }
     }
 }
