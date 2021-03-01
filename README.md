@@ -47,7 +47,7 @@ public class SearchedEventArgs : EventArgs
 -----------------------------------
 
 ## 이벤트
-C#에서 ~~이벤트 핸들러를 작성하는 것 말고~~ 이벤트를 생성하는 방법에 관한 글은 [여기](http://kimgwajang.tistory.com/5)를 참고하십시오.
+C#에서 ~~이벤트 핸들러를 작성하는 것 말고~~ 이벤트를 생성하는 방법에 관한 글은 [여기](https://github.com/cplkimth/EventStuffGenerator/blob/master/documents/delegate%20and%20event.pdf)를 참고하십시오.
 
 -----------------------------------
 
