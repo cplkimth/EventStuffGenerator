@@ -3,11 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{DD100714-70D0-4681-B420-BE7CDE9DBCF3}"
-	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventStuffGenerator", "EventStuffGenerator\EventStuffGenerator.csproj", "{59CC44CB-2CF5-4024-81C1-9E3E26245557}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventStuffGenerator.Core", "EventStuffGenerator.Core\EventStuffGenerator.Core.csproj", "{BDDD45D2-30B5-41C0-9C4B-EB4463602CD3}"
@@ -15,6 +10,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventStuffGenerator.Win", "EventStuffGenerator.Win\EventStuffGenerator.Win.csproj", "{63434EE3-BF05-4C75-8F69-EADF96BB8B95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{C974F6A8-8B64-4A3A-961C-8568A0FBA8FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documents", "documents", "{6D82A443-DD64-4AF2-92A7-9699A926A5EE}"
+	ProjectSection(SolutionItems) = preProject
+		documents\delegate and event.pdf = documents\delegate and event.pdf
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{53B0A872-A11C-4039-8E64-A627650B345B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +44,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{53B0A872-A11C-4039-8E64-A627650B345B} = {6D82A443-DD64-4AF2-92A7-9699A926A5EE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B57E57D6-BCAD-420D-9072-84254C0BC5A7}
