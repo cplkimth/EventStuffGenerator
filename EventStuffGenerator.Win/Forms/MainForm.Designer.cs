@@ -29,6 +29,7 @@ namespace EventStuffGenerator.Win.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.uscTemplateSelection = new EventStuffGenerator.Win.Controls.TemplateSelectionControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -193,6 +194,7 @@ namespace EventStuffGenerator.Win.Forms
             this.txbGenerated.Multiline = true;
             this.txbGenerated.Name = "txbGenerated";
             this.txbGenerated.ReadOnly = true;
+            this.txbGenerated.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txbGenerated.Size = new System.Drawing.Size(306, 400);
             this.txbGenerated.TabIndex = 0;
             this.txbGenerated.TabStop = false;
@@ -209,7 +211,7 @@ namespace EventStuffGenerator.Win.Forms
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 404F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(623, 404);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
@@ -219,10 +221,10 @@ namespace EventStuffGenerator.Win.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(631, 412);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
-            this.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Padding = new System.Windows.Forms.Padding(4);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "이벤트 코드 생성기";
             this.groupBox1.ResumeLayout(false);
