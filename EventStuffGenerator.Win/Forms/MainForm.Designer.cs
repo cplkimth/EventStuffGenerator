@@ -36,22 +36,18 @@ namespace EventStuffGenerator.Win.Forms
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txbEventName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txbGenerated = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnGenerate = new System.Windows.Forms.Button();
-            this.btnEbnf = new System.Windows.Forms.Button();
             this.chbCopyToClipboard = new System.Windows.Forms.CheckBox();
-            this.tbcContainer = new System.Windows.Forms.TabControl();
-            this.tbpGenerate = new System.Windows.Forms.TabPage();
-            this.tbpCode = new System.Windows.Forms.TabPage();
+            this.btnEbnf = new System.Windows.Forms.Button();
+            this.btnGenerate = new System.Windows.Forms.Button();
+            this.txbGenerated = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.tbcContainer.SuspendLayout();
-            this.tbpGenerate.SuspendLayout();
-            this.tbpCode.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -59,8 +55,10 @@ namespace EventStuffGenerator.Win.Forms
             this.groupBox1.Controls.Add(this.uscTemplateSelection);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(426, 54);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(305, 43);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "템플릿";
@@ -68,9 +66,10 @@ namespace EventStuffGenerator.Win.Forms
             // uscTemplateSelection
             // 
             this.uscTemplateSelection.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscTemplateSelection.Location = new System.Drawing.Point(3, 21);
+            this.uscTemplateSelection.Location = new System.Drawing.Point(3, 16);
+            this.uscTemplateSelection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uscTemplateSelection.Name = "uscTemplateSelection";
-            this.uscTemplateSelection.Size = new System.Drawing.Size(420, 30);
+            this.uscTemplateSelection.Size = new System.Drawing.Size(299, 25);
             this.uscTemplateSelection.TabIndex = 0;
             this.uscTemplateSelection.TabStop = false;
             // 
@@ -78,9 +77,11 @@ namespace EventStuffGenerator.Win.Forms
             // 
             this.groupBox2.Controls.Add(this.txbArgumentText);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 105);
+            this.groupBox2.Location = new System.Drawing.Point(0, 84);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(426, 162);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(305, 270);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "이벤트 매개변수";
@@ -88,19 +89,22 @@ namespace EventStuffGenerator.Win.Forms
             // txbArgumentText
             // 
             this.txbArgumentText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txbArgumentText.Location = new System.Drawing.Point(3, 21);
+            this.txbArgumentText.Location = new System.Drawing.Point(3, 16);
+            this.txbArgumentText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbArgumentText.Multiline = true;
             this.txbArgumentText.Name = "txbArgumentText";
-            this.txbArgumentText.Size = new System.Drawing.Size(420, 138);
+            this.txbArgumentText.Size = new System.Drawing.Size(299, 252);
             this.txbArgumentText.TabIndex = 0;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txbEventName);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox3.Location = new System.Drawing.Point(0, 54);
+            this.groupBox3.Location = new System.Drawing.Point(0, 43);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(426, 51);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(305, 41);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "이벤트 이름";
@@ -108,9 +112,10 @@ namespace EventStuffGenerator.Win.Forms
             // txbEventName
             // 
             this.txbEventName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txbEventName.Location = new System.Drawing.Point(3, 21);
+            this.txbEventName.Location = new System.Drawing.Point(3, 16);
+            this.txbEventName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbEventName.Name = "txbEventName";
-            this.txbEventName.Size = new System.Drawing.Size(420, 25);
+            this.txbEventName.Size = new System.Drawing.Size(299, 21);
             this.txbEventName.TabIndex = 0;
             // 
             // panel1
@@ -120,21 +125,11 @@ namespace EventStuffGenerator.Win.Forms
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(426, 324);
+            this.panel1.Size = new System.Drawing.Size(305, 400);
             this.panel1.TabIndex = 6;
-            // 
-            // txbGenerated
-            // 
-            this.txbGenerated.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txbGenerated.Location = new System.Drawing.Point(3, 3);
-            this.txbGenerated.Multiline = true;
-            this.txbGenerated.Name = "txbGenerated";
-            this.txbGenerated.ReadOnly = true;
-            this.txbGenerated.Size = new System.Drawing.Size(426, 324);
-            this.txbGenerated.TabIndex = 0;
-            this.txbGenerated.TabStop = false;
             // 
             // groupBox5
             // 
@@ -142,34 +137,14 @@ namespace EventStuffGenerator.Win.Forms
             this.groupBox5.Controls.Add(this.btnEbnf);
             this.groupBox5.Controls.Add(this.btnGenerate);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox5.Location = new System.Drawing.Point(0, 267);
+            this.groupBox5.Location = new System.Drawing.Point(0, 354);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(426, 57);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Size = new System.Drawing.Size(305, 46);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "실행";
-            // 
-            // btnGenerate
-            // 
-            this.btnGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGenerate.Location = new System.Drawing.Point(345, 24);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(75, 23);
-            this.btnGenerate.TabIndex = 0;
-            this.btnGenerate.Text = "&Generate";
-            this.btnGenerate.UseVisualStyleBackColor = true;
-            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
-            // 
-            // btnEbnf
-            // 
-            this.btnEbnf.Location = new System.Drawing.Point(6, 24);
-            this.btnEbnf.Name = "btnEbnf";
-            this.btnEbnf.Size = new System.Drawing.Size(75, 23);
-            this.btnEbnf.TabIndex = 1;
-            this.btnEbnf.TabStop = false;
-            this.btnEbnf.Text = "&EBNF";
-            this.btnEbnf.UseVisualStyleBackColor = true;
-            this.btnEbnf.Click += new System.EventHandler(this.btnEbnf_Click);
             // 
             // chbCopyToClipboard
             // 
@@ -177,56 +152,77 @@ namespace EventStuffGenerator.Win.Forms
             this.chbCopyToClipboard.AutoSize = true;
             this.chbCopyToClipboard.Checked = true;
             this.chbCopyToClipboard.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chbCopyToClipboard.Location = new System.Drawing.Point(186, 27);
+            this.chbCopyToClipboard.Location = new System.Drawing.Point(97, 22);
+            this.chbCopyToClipboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chbCopyToClipboard.Name = "chbCopyToClipboard";
-            this.chbCopyToClipboard.Size = new System.Drawing.Size(152, 19);
+            this.chbCopyToClipboard.Size = new System.Drawing.Size(131, 16);
             this.chbCopyToClipboard.TabIndex = 2;
             this.chbCopyToClipboard.TabStop = false;
             this.chbCopyToClipboard.Text = "Copy To Clipboard";
             this.chbCopyToClipboard.UseVisualStyleBackColor = true;
             // 
-            // tbcContainer
+            // btnEbnf
             // 
-            this.tbcContainer.Controls.Add(this.tbpGenerate);
-            this.tbcContainer.Controls.Add(this.tbpCode);
-            this.tbcContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbcContainer.Location = new System.Drawing.Point(5, 5);
-            this.tbcContainer.Name = "tbcContainer";
-            this.tbcContainer.SelectedIndex = 0;
-            this.tbcContainer.Size = new System.Drawing.Size(440, 359);
-            this.tbcContainer.TabIndex = 1;
+            this.btnEbnf.Location = new System.Drawing.Point(5, 19);
+            this.btnEbnf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEbnf.Name = "btnEbnf";
+            this.btnEbnf.Size = new System.Drawing.Size(66, 18);
+            this.btnEbnf.TabIndex = 1;
+            this.btnEbnf.TabStop = false;
+            this.btnEbnf.Text = "&EBNF";
+            this.btnEbnf.UseVisualStyleBackColor = true;
+            this.btnEbnf.Click += new System.EventHandler(this.btnEbnf_Click);
             // 
-            // tbpGenerate
+            // btnGenerate
             // 
-            this.tbpGenerate.Controls.Add(this.panel1);
-            this.tbpGenerate.Location = new System.Drawing.Point(4, 25);
-            this.tbpGenerate.Name = "tbpGenerate";
-            this.tbpGenerate.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpGenerate.Size = new System.Drawing.Size(432, 330);
-            this.tbpGenerate.TabIndex = 0;
-            this.tbpGenerate.Text = "생성";
-            this.tbpGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenerate.Location = new System.Drawing.Point(234, 19);
+            this.btnGenerate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(66, 18);
+            this.btnGenerate.TabIndex = 0;
+            this.btnGenerate.Text = "&Generate";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
-            // tbpCode
+            // txbGenerated
             // 
-            this.tbpCode.Controls.Add(this.txbGenerated);
-            this.tbpCode.Location = new System.Drawing.Point(4, 25);
-            this.tbpCode.Name = "tbpCode";
-            this.tbpCode.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpCode.Size = new System.Drawing.Size(432, 330);
-            this.tbpCode.TabIndex = 1;
-            this.tbpCode.Text = "코드";
-            this.tbpCode.UseVisualStyleBackColor = true;
+            this.txbGenerated.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txbGenerated.Location = new System.Drawing.Point(314, 2);
+            this.txbGenerated.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txbGenerated.Multiline = true;
+            this.txbGenerated.Name = "txbGenerated";
+            this.txbGenerated.ReadOnly = true;
+            this.txbGenerated.Size = new System.Drawing.Size(306, 400);
+            this.txbGenerated.TabIndex = 0;
+            this.txbGenerated.TabStop = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.txbGenerated, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 4);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(623, 404);
+            this.tableLayoutPanel1.TabIndex = 7;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 369);
-            this.Controls.Add(this.tbcContainer);
+            this.ClientSize = new System.Drawing.Size(631, 412);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
-            this.Padding = new System.Windows.Forms.Padding(5);
+            this.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "이벤트 코드 생성기";
             this.groupBox1.ResumeLayout(false);
@@ -237,10 +233,8 @@ namespace EventStuffGenerator.Win.Forms
             this.panel1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.tbcContainer.ResumeLayout(false);
-            this.tbpGenerate.ResumeLayout(false);
-            this.tbpCode.ResumeLayout(false);
-            this.tbpCode.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -258,9 +252,7 @@ namespace EventStuffGenerator.Win.Forms
         private System.Windows.Forms.CheckBox chbCopyToClipboard;
         private System.Windows.Forms.Button btnEbnf;
         private System.Windows.Forms.Button btnGenerate;
-        private System.Windows.Forms.TabControl tbcContainer;
-        private System.Windows.Forms.TabPage tbpGenerate;
-        private System.Windows.Forms.TabPage tbpCode;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 

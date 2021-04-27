@@ -3,8 +3,7 @@ public event EventHandler<[EN]EventArgs> [EN];
 
 protected virtual void On[EN]([EN]EventArgs e)
 {
-	if ([EN] != null)
-		[EN](this, e);
+	[EN]?.Invoke(this, e);
 }
 
 private [EN]EventArgs On[EN](<*[AT] [AC] :: , *>)
