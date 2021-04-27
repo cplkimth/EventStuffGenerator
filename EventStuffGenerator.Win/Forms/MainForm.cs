@@ -44,7 +44,6 @@ namespace EventStuffGenerator.Win.Forms
             var code = Generator.Generate(templatePath, txbEventName.Text.Trim(), txbArgumentText.Text.Trim());
 
             txbGenerated.Text = code;
-            tbcContainer.SelectedTab = tbpCode;
 
             if (chbCopyToClipboard.Checked)
                 Clipboard.SetText(code);
