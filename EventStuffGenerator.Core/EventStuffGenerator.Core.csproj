@@ -11,10 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Templates\default.esg">
+    <None Update="Templates\clr.esg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Templates\WPF.esg">
+    <None Update="Templates\routed.esg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

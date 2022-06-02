@@ -62,7 +62,7 @@ namespace EventStuffGenerator.Win.Forms
             this.groupBox1.Size = new System.Drawing.Size(305, 43);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "템플릿";
+            this.groupBox1.Text = "Template Name";
             // 
             // uscTemplateSelection
             // 
@@ -85,7 +85,7 @@ namespace EventStuffGenerator.Win.Forms
             this.groupBox2.Size = new System.Drawing.Size(305, 270);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "이벤트 매개변수";
+            this.groupBox2.Text = "Event Arguments";
             // 
             // txbArgumentText
             // 
@@ -108,7 +108,7 @@ namespace EventStuffGenerator.Win.Forms
             this.groupBox3.Size = new System.Drawing.Size(305, 41);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "이벤트 이름";
+            this.groupBox3.Text = "Event Name";
             // 
             // txbEventName
             // 
@@ -145,7 +145,7 @@ namespace EventStuffGenerator.Win.Forms
             this.groupBox5.Size = new System.Drawing.Size(305, 46);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "실행";
+            this.groupBox5.Text = "Run";
             // 
             // chbCopyToClipboard
             // 
@@ -226,7 +226,7 @@ namespace EventStuffGenerator.Win.Forms
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(4);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "이벤트 코드 생성기";
+            this.Text = "Event Stuff Generator";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

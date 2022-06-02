@@ -4,7 +4,7 @@
     {
         public const string RootPath = "Templates";
         public const string FileExtension = ".esg";
-        public const string DefaultName = "default";
+        public const string DefaultName = "clr";
         
         public const string CustomPrefix = "Custom";
 

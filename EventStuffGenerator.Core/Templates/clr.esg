@@ -1,4 +1,4 @@
-﻿#region [EN] event things for C# 3.0
+﻿#region [EN] event
 public event EventHandler<[EN]EventArgs> [EN];
 
 protected virtual void On[EN]([EN]EventArgs e)

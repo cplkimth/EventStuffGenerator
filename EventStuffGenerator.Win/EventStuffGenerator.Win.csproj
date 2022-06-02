@@ -85,12 +85,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="..\EventStuffGenerator.Core\Templates\default.esg">
-      <Link>Templates\default.esg</Link>
+    <None Include="..\EventStuffGenerator.Core\Templates\clr.esg">
+      <Link>Templates\clr.esg</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\EventStuffGenerator.Core\Templates\WPF.esg">
-      <Link>Templates\WPF.esg</Link>
+    <None Include="..\EventStuffGenerator.Core\Templates\routed.esg">
+      <Link>Templates\routed.esg</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">

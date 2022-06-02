@@ -39,18 +39,21 @@ namespace EventStuffGenerator.Win.Controls
             this.cbbTemplate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTemplate.FormattingEnabled = true;
             this.cbbTemplate.Location = new System.Drawing.Point(0, 0);
+            this.cbbTemplate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbTemplate.Name = "cbbTemplate";
-            this.cbbTemplate.Size = new System.Drawing.Size(150, 23);
+            this.cbbTemplate.Size = new System.Drawing.Size(131, 20);
             this.cbbTemplate.TabIndex = 0;
             // 
             // TemplateSelectionControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.cbbTemplate);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TemplateSelectionControl";
-            this.Size = new System.Drawing.Size(150, 26);
+            this.Size = new System.Drawing.Size(131, 21);
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.ComboBox cbbTemplate;
