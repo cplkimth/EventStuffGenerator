@@ -1,16 +1,15 @@
 ﻿#region [EN] event
+public static readonly RoutedEvent [EN]Event = EventManager.RegisterRoutedEvent("[EN]", RoutingStrategy.Bubble, typeof(EventHandler<[EN]EnventArgs>), typeof(ContainerType));
 
-public static readonly RoutedEvent [EN]Event = EventManager.RegisterRoutedEvent("[EN]", RoutingStrategy.Bubble, typeof(EventHandler<[EN]Args>), typeof(ContainerType));
-
-public event EventHandler<[EN]Args> [EN]
+public event EventHandler<[EN]EnventArgs> [EN]
 {
-    add { AddHandler([EN]Event, value); }
-    remove { RemoveHandler([EN]Event, value); }
+    add => AddHandler([EN]Event, value);
+    remove => RemoveHandler([EN]Event, value);
 }
 
-protected virtual [EN]Args On[EN](<*[AT] [AC] :: , *>)
+protected virtual [EN]EnventArgs On[EN](<*[AT] [AC] :: , *>)
 {
-    var args = new [EN]Args([EN]Event);
+    var args = new [EN]EnventArgs([EN]Event);
 	<*args.[AP] = [AC]; :: [N]*>
 
     RaiseEvent(args);
@@ -18,13 +17,12 @@ protected virtual [EN]Args On[EN](<*[AT] [AC] :: , *>)
     return args;
 }
 
-public class [EN]Args : RoutedEventArgs
+public class [EN]EnventArgs : RoutedEventArgs
 {
-    public [EN]Args(RoutedEvent routedEvent): base(routedEvent)
+    public [EN]EnventArgs(RoutedEvent routedEvent): base(routedEvent)
     {
     }
 
     <*public [AT] [AP] { get; set;} :: [N]*>
 }
-
 #endregion
