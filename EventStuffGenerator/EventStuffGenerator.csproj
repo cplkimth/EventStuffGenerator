@@ -17,10 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\EventStuffGenerator.Core\Templates\default.esg" Link="Templates\default.esg">
+    <None Include="..\EventStuffGenerator.Core\Templates\clr.esg" Link="Templates\clr.esg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\EventStuffGenerator.Core\Templates\WPF.esg" Link="Templates\WPF.esg">
+    <None Include="..\EventStuffGenerator.Core\Templates\routed.esg" Link="Templates\routed.esg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
