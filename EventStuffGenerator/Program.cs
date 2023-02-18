@@ -1,6 +1,8 @@
 ﻿// https://github.com/CopyText/TextCopy
 
 using System;
+using System.IO;
+using System.Linq;
 using CommandLine;
 using EventStuffGenerator.Core.Components;
 using TextCopy;
@@ -36,8 +38,11 @@ namespace EventStuffGenerator
                 Console.WriteLine("Enter [argumentText]. ex) int oldAge, int newAge");
                 argumentText = Console.ReadLine();
 
-                Console.WriteLine("Enter [templateName] or just enter if you want to use [clr]. ex) routed");
-                templateName = Console.ReadLine();
+                while (templateName == null)
+                {
+                    Console.WriteLine("Choose a template.");
+                    templateName = ChooseTemplate();
+                }
             }
 
             if (eventName == null || argumentText == null)
@@ -67,6 +72,33 @@ namespace EventStuffGenerator
                 Console.WriteLine(ex.Message);
                 Console.WriteLine("If you run this under debian, try install xclip by following command");
                 Console.WriteLine("sudo apt install xclip");
+            }
+        }
+
+        private static string ChooseTemplate()
+        {
+            var pathes = Directory.GetFiles(Template.RootPath, $"*{Template.FileExtension}");
+            var names = pathes.Select(x => Path.GetFileNameWithoutExtension(x)).ToList();
+
+            var tuples = names.Zip(Enumerable.Range(1, names.Count));
+            foreach (var tuple in tuples)
+            {
+                Console.WriteLine($"  [{tuple.Second}] {tuple.First}");
+            }
+
+            var line = Console.ReadLine();
+
+            if (line == "")
+                return names[0];
+
+            try
+            {
+                int input = int.Parse(line);
+                return names[input - 1];
+            }
+            catch
+            {
+                return null;
             }
         }
 

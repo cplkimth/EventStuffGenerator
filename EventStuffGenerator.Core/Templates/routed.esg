@@ -1,28 +1,50 @@
 ﻿#region [EN] event
-public static readonly RoutedEvent [EN]Event = EventManager.RegisterRoutedEvent("[EN]", RoutingStrategy.Bubble, typeof(EventHandler<[EN]EnventArgs>), typeof(ContainerType));
+public static readonly RoutedEvent [EN]Event = EventManager.RegisterRoutedEvent(
+name: "[EN]", 
+routingStrategy: RoutingStrategy.Bubble, 
+handlerType: typeof([EN]EventHandler), 
+ownerType: typeof(/*ContainerType*/));
 
-public event EventHandler<[EN]EnventArgs> [EN]
+public event [EN]EventHandler [EN]
 {
     add => AddHandler([EN]Event, value);
     remove => RemoveHandler([EN]Event, value);
 }
 
-protected virtual [EN]EnventArgs On[EN](<*[AT] [AC] :: , *>)
+protected virtual void On[EN]([EN]EventArgs e)
 {
-    var args = new [EN]EnventArgs([EN]Event);
-	<*args.[AP] = [AC]; :: [N]*>
+	 RaiseEvent(e);
+}
 
-    RaiseEvent(args);
+private [EN]EventArgs On[EN](<*[AT] [AC] :: , *>)
+{
+	[EN]EventArgs args = new [EN]EventArgs([EN]Event, <*[AC] :: , *>);
+    On[EN](args);
 
     return args;
 }
 
-public class [EN]EnventArgs : RoutedEventArgs
+[BC]private [EN]EventArgs On[EN]ForOut()
 {
-    public [EN]EnventArgs(RoutedEvent routedEvent): base(routedEvent)
-    {
-    }
+	[EN]EventArgs args = new [EN]EventArgs([EN]Event);
+    On[EN](args);
 
-    <*public [AT] [AP] { get; set;} :: [N]*>
+    return args;
+}[EC]
+
+public delegate void [EN]EventHandler(object sender, [EN]EventArgs e);
+
+public class [EN]EventArgs : RoutedEventArgs
+{
+	<*public [AT] [AP] { get; set;} :: [N]*>
+
+	[BC]public [EN]EventArgs(RoutedEvent routedEvent) : base(routedEvent)
+    {
+	}
+	
+	public [EN]EventArgs(RoutedEvent routedEvent, <*[AT] [AC] :: , *>) : this(routedEvent)
+    {
+		<*[AP] = [AC]; :: [N]*>
+	}[EC]
 }
 #endregion
